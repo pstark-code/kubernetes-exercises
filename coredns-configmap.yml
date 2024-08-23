@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: coredns
+  namespace: kube-system
+
+data:
+  Corefile: |
+    homelab.local {
+      file homelab.local.zone
+    }
+    .:53 {
+        errors
+        health {
+           lameduck 5s
+        }
+        ready
+        kubernetes cluster.local in-addr.arpa ip6.arpa {
+           pods insecure
+           fallthrough in-addr.arpa ip6.arpa
+           ttl 30
+        }
+        prometheus :9153
+        forward . /etc/resolv.conf {
+           max_concurrent 1000
+        }
+        cache 30
+        loop
+        reload
+        loadbalance
+    }
+
+  homelab.local.zone: |
+    $ORIGIN homelab.local.
+    @	3600 IN	SOA sns.dns.icann.org. noc.dns.icann.org. (
+            2017042745 ; serial
+            7200       ; refresh (2 hours)
+            3600       ; retry (1 hour)
+            1209600    ; expire (2 weeks)
+            3600       ; minimum (1 hour)
+            )
+
+      3600 IN NS a.iana-servers.net.
+      3600 IN NS b.iana-servers.net.
+
+    homelab.local.        IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local 
+    git.homelab.local.    IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
+    idm.homelab.local.    IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
+    runner.homelab.local. IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local 
+    wiki.homelab.local.   IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
+    app-a.homelab.local.  IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
+    app-b.homelab.local.  IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
+    app-c.homelab.local.  IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
+    app-d.homelab.local.  IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
+    app-e.homelab.local.  IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
+    #IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
+    #www     IN A     127.0.0.1
+    #        IN AAAA  ::1
+
