@@ -20,14 +20,14 @@ Falls du die kubeconfig in eine separate Datei ausgegeben hast, kannst du diese 
 
 Beispiel Bash:
 
-```
+```shell
 export KUBECONFIG="./kubeconfig.yml"
-oder
+# oder
 kubectl --kubeconfig="./kubeconfig.yml"
 ```
 
 Umgebungsvariable setzen in der PowerShell:
-```
+```powershell
 $Env:KUBECONFIG=".\kubeconfig.yml"
 kubectl get all -A
 ```
