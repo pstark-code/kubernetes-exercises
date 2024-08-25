@@ -78,10 +78,10 @@ metadata:
 spec:
   tls:
   - hosts: 
-    - "example.org"
+    - "app-e.homelab.local"
     secretName: "example-tls"
   rules:
-  - host: example.org
+  - host: "app-e.homelab.local"
     http:
       paths:
       - pathType: Prefix

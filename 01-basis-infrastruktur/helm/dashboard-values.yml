@@ -1,0 +1,24 @@
+app:
+  settings:
+    global:
+      clusterName: "TBZ Homelab"
+      itemsPerPage: 50
+    pinnedResources: []
+  ingress:
+    enabled: true
+    hosts:
+      - dashboard.homelab.local
+    useDefaultIngressClass: true
+    pathType: ImplementationSpecific
+    path: /
+    issuer:
+      name: custom-ca-issuer
+      scope: cluster
+
+metricsScraper:
+  enabled: false
+
+cert-manager:
+  enabled: false
+  installCRDs: false
+
