@@ -31,3 +31,15 @@ Umgebungsvariable setzen in der PowerShell:
 $Env:KUBECONFIG=".\kubeconfig.yml"
 kubectl get all -A
 ```
+
+Hoffentlich läuft der Cluster jetzt. Alles ab jetzt sollte für beliebige "certified kubernetes" cluster funktionieren, nicht nur mit eurem lokalen Kind-cluster. 
+
+## Kustomize 
+
+Im Ordner "kustomize" findet ihr eine Handvoll Kubernetes Manifests und eine Datei namens "kustomization.yml"
+
+Bisher hatten wir gesehen, dass wir Kubernetes Manifests mit `kubectl apply -f <Dateiname oder URL>` hochladen können. wenn wir jetzt aber mehr als nur eine Datei haben, wird das schnell unübersichtlich. 
+
+Da kommt uns das Werkzeug "kustomize" sehr gelegen. Ursprünglich war dies ein separates Programm, heute ist das in kubectl eingebaut. Mit kustomize können beliebig viele YAML Dateien gleichzeitig verarbeitet werden, solange sie im zugehörigen "kustomization.yml" unter dem Key namens "Resources:" vermerkt sind. Das ist jetzt alles etwas abstrakt. Am besten schaut ihr jetzt mal in dieses kustomization.yml rein, dann wird es hoffentlich klarer. Den "Patches:" Key könnt ihr vorerst zur Seite lassen.
+
+
