@@ -1,6 +1,11 @@
 
 limitNamespace: false
 
+# image:
+#   repository: ghcr.io/pstark-code/kubeview
+#   tag: 0.2.0
+#   pullPolicy: Always
+
 ingress:
   enabled: true
   className: nginx
