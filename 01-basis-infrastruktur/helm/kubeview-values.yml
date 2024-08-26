@@ -12,9 +12,9 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: custom-ca-issuer
   hosts:
-    - host: app-a.homelab.local
+    - host: kubeview.homelab.local
   tls:
     - secretName: kubeview-cert
       hosts:
-        - app-a.homelab.local
+        - kubeview.homelab.local
 
