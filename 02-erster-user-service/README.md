@@ -6,6 +6,10 @@ Nehmt eure Applikation aus dem Mikroservices Modul hervor und sucht eure `compos
 
 Ich werde mich am "Autoshop" Beispiel von Marcel orientieren. Das entsprechende `docker-compose.yml` File findet ihr hier: https://gitlab.com/ch-mc-b/autoshop-ms/app/shop/-/blob/main/docker-compose.yml
 
+Um zu illustrieren, wie dies aussehen könnte: 
+
+![diagram illustrating a Kubernetes Namespace and the objects within](example-app.png)
+
 ## Compose-Services zu Kubernetes-Objekten
 
 In der compose Datei sind Services deklariert, die je einen Container beinhalten.
