@@ -44,6 +44,8 @@ data:
       3600 IN NS b.iana-servers.net.
 
     homelab.local.        IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local 
+    dashboard.homelab.local.    IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
+    kubeview.homelab.local.    IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
     git.homelab.local.    IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
     idm.homelab.local.    IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local
     runner.homelab.local. IN CNAME ingress-nginx-controller.ingress-nginx.svc.cluster.local 
