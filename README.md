@@ -1,3 +1,7 @@
+# Inhalte des Cloud-Native Core Moduls
+
+[inhalte.md](./inhalte.md)
+
 # Einführung zur Übungsreihe "Kubernetes Homelab"
 
 In dieser Übungsreihe werden wir über das Semester Schritt für Schritt die Werkzeuge und Konfigurationen erarbeiten um einen Homelab Kubernetes Cluster zu deployen. Darauf werden wir eine Handvoll nützliche Homelab-Service installieren. 
