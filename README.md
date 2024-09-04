@@ -19,4 +19,4 @@ In diesen Unterlagen werde ich einen Pfad vorstellen, der verschiedene Umsysteme
 
 In dieser ersten Etappe setzen wir einen Kind-Cluster auf, mit einem Control-Plane-Node und drei Worker-Nodes. Darauf installieren wir das Kubernetes-Dashboard und die Applikation "Kubeview", die eine visuelle Übersicht zur Verfügung stellt.
 
-Für Details siehe Ordner [./01-basis-infrastruktur](./01-basis-infrastruktur/Uebung.md)
+Für Details siehe Ordner [./01-basis-infrastruktur](./01-basis-infrastruktur/README.md)
