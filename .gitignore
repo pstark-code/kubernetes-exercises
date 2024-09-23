@@ -1,1 +1,5 @@
 _ignore*
+*.code-workspace
+node_modules/
+01.5-kubernetes-hands-on/package.json
+01.5-kubernetes-hands-on/package-lock.json
