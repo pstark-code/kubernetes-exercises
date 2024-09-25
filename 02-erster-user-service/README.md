@@ -1,14 +1,11 @@
-# Übung 2 - Unsere ersten eigenen Service!
+# Übung - Storage, ConfigMaps und Secrets 
 
-Nachdem ihr in der ersten Übung vorallem Kommandos herumkopiert habt, kommt ihr jetzt dazu, eure eigenen Kubernetes Manifests zu erstellen und zu konfigurieren.
+Ich will dass ihr fortlaufend selbststaendiger arbeiten koennt. 
 
 Nehmt eure Applikation aus dem Mikroservices Modul hervor und sucht eure `compose.yml` oder `docker-compose.yml` Datei raus. 
 
 Ich werde mich am "Autoshop" Beispiel von Marcel orientieren. Das entsprechende `docker-compose.yml` File findet ihr hier: https://gitlab.com/ch-mc-b/autoshop-ms/app/shop/-/blob/main/docker-compose.yml
 
-Um zu illustrieren, wie dies aussehen könnte: 
-
-![diagram illustrating a Kubernetes Namespace and the objects within](example-app.png)
 
 ## Compose-Services zu Kubernetes-Objekten
 
