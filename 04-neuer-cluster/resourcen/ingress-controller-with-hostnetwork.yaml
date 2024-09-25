@@ -358,8 +358,6 @@ spec:
         app.kubernetes.io/instance: ingress-nginx
         app.kubernetes.io/name: ingress-nginx
     spec:
-      nodeSelector:
-        ingress: "true"
       hostNetwork: true
       containers:
       - args:
@@ -438,6 +436,7 @@ spec:
           readOnly: true
       dnsPolicy: ClusterFirst
       nodeSelector:
+        ingress: "true"
         kubernetes.io/os: linux
       serviceAccountName: ingress-nginx
       terminationGracePeriodSeconds: 300
