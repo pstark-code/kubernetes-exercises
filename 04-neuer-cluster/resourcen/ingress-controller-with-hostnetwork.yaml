@@ -358,6 +358,8 @@ spec:
         app.kubernetes.io/instance: ingress-nginx
         app.kubernetes.io/name: ingress-nginx
     spec:
+      nodeSelector:
+        ingress: "true"
       hostNetwork: true
       containers:
       - args:
