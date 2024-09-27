@@ -49,5 +49,5 @@ spec:
   resources:
     requests:
       storage: 100Mi
-  storageClassName: nfs-client
+  storageClassName: nfs-storage
 ```
