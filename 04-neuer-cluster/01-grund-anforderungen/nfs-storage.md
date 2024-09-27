@@ -14,6 +14,8 @@ helm upgrade --install --namespace "kube-system" csi-driver-nfs csi-driver-nfs/c
 
 Wenn das läuft, diese StorageClass mit `kubectl apply -f` deployen:
 
+Achtung: Das `$CLUSTER` noch mit eurem clusternamen ersetzen (z.b. "ws01")
+
 ```yaml
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
@@ -21,7 +23,7 @@ metadata:
   name: "nfs-storage"
 provisioner: nfs.csi.k8s.io
 parameters:
-  server: "10.0.22.8
+  server: "10.0.22.8"
   share: "/data/storage/$CLUSTER"
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
