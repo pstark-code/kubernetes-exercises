@@ -51,3 +51,6 @@ spec:
       storage: 100Mi
   storageClassName: nfs-storage
 ```
+
+Gratulation! Du hast erfolgreich Persistent Storage zu deinem Cluster hinzugefügt! 
+
