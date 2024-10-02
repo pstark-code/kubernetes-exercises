@@ -161,15 +161,17 @@ Mit k0sctl die Konfiguration ausrollen:
 https://docs.k0sproject.io/stable/k0sctl-install/#3-deploy-the-cluster
 
 
-# Aufgabe 3
+# Aufgabe 3 - Ingress-Controller Installieren
 
-Ingress installieren. 
+-> Siehe [ingress.md](./01-grund-anforderungen/ingress.md)
 
-Siehe https://docs.k0sproject.io/stable/examples/nginx-ingress/
- 
-```shell
-kubectl apply -f "https://raw.githubusercontent.com/pstark-code/kubernetes-homelab/refs/heads/main/04-neuer-cluster/resourcen/ingress-controller-with-hostnetwork.yaml"
-kubectl label nodes wsXY-YZ-cnc-worker-01 ingress="true"
-```
+# Aufgabe 4 - NFS Storage Treiber Installieren
 
-Aufgabe 
+-> Siehe [nfs-storage.md](./01-grund-anforderungen/nfs-storage.md)
+
+# (freiwillig) Aufgabe 5 - Weitere Schritte 
+
+Schaut euch das Dokument [DESIGN.md](./DESIGN.md) an und vergleicht eure bisherigen Schritte mit den Grundanforderungen. 
+
+Und falls euch etwas aus dem Abschnitt "Weitere Schritte" interessiert, folgt den Links und probiert es aus. Probiert es aus, und wenn es fehlschlägt, stellt Fragen.
+
